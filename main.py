@@ -1,7 +1,7 @@
 import sqlite3
 from flask import Flask, render_template
 
-connection = sqlite3.connect("tovary.db", check_same_thread=False)
+connection = sqlite3.connect(r"Laptops_site/tovary.db", check_same_thread=False)
 cursor = connection.cursor()
 
 app = Flask(__name__)
@@ -20,5 +20,5 @@ def assort():
 
 if __name__ ==  "__main__":
     app.run(debug=True, port = 8000)
-#lalalla
+
 
