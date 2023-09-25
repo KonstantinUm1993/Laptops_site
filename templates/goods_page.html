@@ -5,15 +5,64 @@
         {%for i in laptops%}
       <div class="col">
         <div class="card" style="width: 18rem;">
-        <img src="{{i[10]}}" class="card-img-top" alt="картинки нет">
+        <img src="{{i[11]}}" class="card-img-top" alt="картинки нет">
         <div class="card-body">
-          <h5 class="card-title">{{i[1]}} {{i[2]}}</h5>
-          <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-          <a href="#" class="btn btn-primary">Идти куда-нибудь</a>
+          <h5 class="card-title">{{i[1]}} {{i[2]}} {{i[3]}}</h5>
+          <p class="card-text">{{i[12]}}</p>
+          <a href="#" class="btn btn-primary">В корзину</a>
         </div>
       </div>
     </div>
     {%endfor%}
 </div>
 </div>
+{%if page == 1%}
+<nav aria-label="...">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled"><a class="page-link">Previous</a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="/tovary&p1">1</a></li>
+    <li class="page-item" aria-current="page"><a class="page-link" href="/tovary&p2">2</a>
+    </li> 
+    {%if numb_of_goods > 19%}
+    <li class="page-item"><a class="page-link" href="/tovary&p3">3</a></li>
+    {%endif%}
+    <li class="page-item"><a class="page-link" href="/tovary&p2">Next</a>
+    </li>
+  </ul>
+</nav>
+{%endif%}
+{%if page == 2%}
+<nav aria-label="...">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="/tovary&p1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="/tovary&p1">1</a></li>
+    <li class="page-item active " aria-current="page"><a class="page-link" href="/tovary&p2">2</a>
+    </li>
+    {%if numb_of_goods > 19%}
+    <li class="page-item"><a class="page-link" href="/tovary&p3">3</a></li>
+    {%endif%} 
+    {%if numb_of_goods < 19%}
+    <li class="page-item disabled"><a class="page-link" href="/tovary&p3">Next</a>
+    {%endif%} 
+    </li>
+  </ul>
+</nav>
+{%endif%}
+{%if page == 3%}
+<nav aria-label="...">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="/tovary&p2">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="/tovary&p1">1</a></li>
+    <li class="page-item" aria-current="page"><a class="page-link" href="/tovary&p2">2</a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="/tovary&p3">3</a></li>
+    <li class="page-item"><a class="page-link" href="/tovary&p4">Next</a>
+    </li>
+  </ul>
+</nav>
+{%endif%}
 {%endblock%}
+
