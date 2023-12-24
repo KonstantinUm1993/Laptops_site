@@ -1,0 +1,19 @@
+{%extends 'header.html'%}
+
+{%block main%}
+<div class="container-fluid shadow-sm p-3 mb-5 bg-body-tertiary rounded" style="width: 70%">
+<form method="post">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email адрес отправителя</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Текст обращения</label>
+        <textarea class="form-control" name="text" id="text" rows="3"></textarea>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+    </div>
+</form>
+</div>
+{%endblock%}
