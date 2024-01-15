@@ -1,14 +1,15 @@
 {%extends 'header.html'%} 
 {%block main%}
-  <div class="container">
-    <div class="row row-cols-3 gy-5">
+  <div class="container mb-5" style="width: 100%;">
+    <div class="row row-cols-4 gy-5 justify-content-center align-items-center">
         {%for i in laptops%}
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-        <img src="{{i[11]}}" class="card-img-top" alt="картинки нет">
+      <div class="col col-mx-auto justify-content-center align-items-center">
+        <div class="card shadow-lg p-3 bg-body rounded" style="width: 18rem;">
+        <img src="{{i[11]}}" class="card-img-top" alt="картинки нет" style="height: 150px;">
         <div class="card-body">
-          <h5 class="card-title">{{i[1]}} {{i[2]}} {{i[3]}}</h5>
+          <h5 class="card-title">{{i[1]}} {{i[2]}}</h5>
           <p class="card-text">{{i[12]}}</p>
+          <h5 class="card-title">{{i[3]}}</h5>
           <a href="#" class="btn btn-primary">В корзину</a>
         </div>
       </div>
